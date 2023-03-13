@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\MyLearn\СPP\HelloWorld\Test1\GravityApp\x64\Debug\Gravity.exe</FullPath>
+      <FullPath>C:\CPP\CPP_Test\GravityApp\x64\Debug\Gravity.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

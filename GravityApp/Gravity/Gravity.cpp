@@ -1,20 +1,31 @@
 ﻿#include <iostream>
-#include "Gravity.h"
+#include "constants.h"
 
-int main()
+double getInitialHeght()
 {
-	const double initialHeight = getInitialHeght();
-	calculateAndPrintHeight(initialHeight, 0);
-	calculateAndPrintHeight(initialHeight, 1);
-	calculateAndPrintHeight(initialHeight, 2);
-	calculateAndPrintHeight(initialHeight, 3);
-	calculateAndPrintHeight(initialHeight, 4);
-	calculateAndPrintHeight(initialHeight, 5);
-	calculateAndPrintHeight(initialHeight, 6);
-	calculateAndPrintHeight(initialHeight, 7);
-	calculateAndPrintHeight(initialHeight, 8);
-	calculateAndPrintHeight(initialHeight, 9);
-	calculateAndPrintHeight(initialHeight, 10);
+	std::cout << "Enter the initial height of tower in meters: ";
+	double initialHeight;
+	std::cin >> initialHeight;
+	return initialHeight;
+}
 
-	return 0;
+double calculateeHeight(double initialHeght, int seconds)
+{
+	//[s = u * t + (a * t^2) / 2] 
+	double distanceFallen = (myConstants::gravity * seconds * seconds) / 2;
+	double currentHeight = initialHeght - distanceFallen;
+
+	return currentHeight;
+}
+void printHeight(double height, int seconds)
+{
+	if (height > 0.0)
+		std::cout << "At " << seconds << " seconds, the ball is at heght: " << height << " meters\n";
+	else
+		std::cout << "At " << seconds << " seconds, the ball is on the ground.\n";
+}
+void calculateAndPrintHeight(double initialHeight, int seconds)
+{
+	double height = calculateeHeight(initialHeight, seconds);
+	printHeight(height, seconds);
 }
