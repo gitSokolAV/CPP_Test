@@ -1,6 +1,10 @@
 ﻿  main.cpp
 C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(11,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(24,19): warning C4305: инициализация: усечение из "double" в "float"
-C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(94,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(94,30): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(29,19): warning C4305: инициализация: усечение из "double" в "float"
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(49,59): warning C4305: =: усечение из "double" в "float"
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(121,14): warning C4305: =: усечение из "double" в "float"
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(144,34): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(144,26): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(153,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(153,30): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   Tetris.vcxproj -> C:\CPP\CPP_Test\TetrisApp\Debug\Tetris.exe
