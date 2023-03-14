@@ -6,6 +6,12 @@ int main()
 {
 	RenderWindow window(VideoMode(320, 480), "The Game!");
 
+	Texture texture;
+	texture.loadFromFile("C:\\CPP\\CPP_Test\\TetrisApp\\images\\tiles.png");
+
+	Sprite sprite(texture);
+	sprite.setTextureRect(IntRect(0,0,18, 18));
+
 	while (window.isOpen())
 	{
 		//
@@ -16,8 +22,8 @@ int main()
 
 		}
 		window.clear(Color::White);
+		window.draw(sprite);
 		window.display();
-		return 0;
-
 	}
+	return 0;
 }
