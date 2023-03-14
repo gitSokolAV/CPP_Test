@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "field.h"
+#include <time.h>
 
 using namespace sf;
 
@@ -7,6 +8,7 @@ using namespace sf;
 
 int main()
 {
+	srand(time(0));
 	RenderWindow window(VideoMode(320, 480), "The Game!");
 
 	Texture texture;
@@ -40,7 +42,18 @@ int main()
 			}
 		}
 		//horizontal moving
-		for (int i = 0; i < 4; i++) a[i].x += dx;
+		for (int i = 0; i < 4; i++)
+		{
+			b[i] = a[i];
+			a[i].x += dx;
+		}
+		if (!check())
+		{
+			for (int i = 0; i < 4; i++)
+			{
+				a[i] = b[i];
+			}
+		}
 
 		//rotate tetramino
 		if (rotate) 
