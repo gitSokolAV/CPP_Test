@@ -14,7 +14,8 @@ int main()
 
 	Sprite sprite(texture);
 	sprite.setTextureRect(IntRect(0,0,18, 18));
-
+	
+	int dx = 0;
 	while (window.isOpen())
 	{
 		//
@@ -22,14 +23,25 @@ int main()
 		while (window.pollEvent(event))
 		{
 			if (event.type == Event::Closed) window.close();
-
+			if (event.type == Event::KeyPressed)
+			{
+				//if (event.key.code == Keyboard::Up) rotate = true;
+			if (event.key.code == Keyboard::Left) dx = -1;
+			else if (event.key.code == Keyboard::Right) dx = 1;
+			}
 		}
+		//horizontal moving
+		for (int i = 0; i < 4; i++) a[i].x += dx;
+
 		int n = 3;
+		//first tetramino?
+		if(a[0].x == 0)
 		for (int i = 0; i < 4; i++)
 		{
 			a[i].x = figures[n][i] % 2;
 			a[i].y = figures[n][i] / 2;
 		}
+		dx = 0;
 		window.clear(Color::White);
 		for (int i = 0; i < 4; i++)
 		{
