@@ -1,6 +1,9 @@
 #include <SFML/Graphics.hpp>
+#include "field.h"
 
 using namespace sf;
+
+
 
 int main()
 {
@@ -21,8 +24,19 @@ int main()
 			if (event.type == Event::Closed) window.close();
 
 		}
+		int n = 3;
+		for (int i = 0; i < 4; i++)
+		{
+			a[i].x = figures[n][i] % 2;
+			a[i].y = figures[n][i] / 2;
+		}
 		window.clear(Color::White);
-		window.draw(sprite);
+		for (int i = 0; i < 4; i++)
+		{
+			sprite.setPosition(a[i].x * 18, a[i].y * 18);
+			window.draw(sprite);
+		}
+		
 		window.display();
 	}
 	return 0;

@@ -1,2 +1,4 @@
 ﻿  main.cpp
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(36,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\CPP\CPP_Test\TetrisApp\Tetris\main.cpp(36,30): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   Tetris.vcxproj -> C:\CPP\CPP_Test\TetrisApp\Debug\Tetris.exe
